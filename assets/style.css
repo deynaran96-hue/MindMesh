@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --primary-light: #eef2ff;
+    --secondary: #8b5cf6;
+    --accent: #06b6d4;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --surface: #ffffff;
+    --surface-subtle: #f8fafc;
+    --border: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 25px -5px rgba(99, 102, 241, 0.12), 0 8px 10px -6px rgba(99, 102, 241, 0.08);
+}
+
+/* Global Typography & Font Overrides */
+/* Global Typography & Font Overrides */
+html, body, [class*="css"], .stMarkdown, .stText, p, span, div {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+code, pre {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+code, pre {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Page Headers */
+.page-header {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-header h1 {
+    font-size: 2.1rem !important;
+    font-weight: 800 !important;
+    color: var(--text-primary) !important;
+    margin: 0 0 0.4rem 0 !important;
+    letter-spacing: -0.5px;
+}
+
+.page-header .subtitle {
+    font-size: 1.05rem !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+    line-height: 1.5;
+}
+
+/* Dashboard Hero Section */
+/* Dashboard Hero Section */
+.dashboard-hero {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2.2rem;
+    color: #ffffff;
+    box-shadow: 0 15px 30px -10px rgba(67, 56, 202, 0.35);
+    margin-bottom: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(129, 140, 248, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+}
+
+/* Feature Cards & Glassmorphic Blocks */
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.4rem;
+    margin-bottom: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* Metric Pill Cards */
+.metric-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-hover);
+}
+
+.metric-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+}
+
+.metric-val {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.metric-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 0.2rem;
+}
+
+/* Dashboard Tool Grid Cards */
+.tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.4rem;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0.6rem;
+    transition: all 0.25s ease;
+}
+
+.tool-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.tool-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+    line-height: 1;
+}
+
+.tool-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.tool-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+/* Pill Badges */
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.badge-info {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.badge-success {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.badge-warning {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.badge-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* 3D Interactive Flashcards */
+.flashcard-container {
+    perspective: 1200px;
+    margin: 1.5rem auto 1.2rem auto;
+    width: 100%;
+    max-width: 680px;
+    height: 320px;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flashcard-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.06);
+}
+
+.flashcard-front {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e0e7ff;
+}
+
+.flashcard-back {
+    background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 2px solid #86efac;
+    transform: rotateY(180deg);
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+    background-color: #f8fafc;
+    border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] .stRadio > div {
+    gap: 0.3rem;
+}
+
+/* Button Refinements */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard-hero {padding: 2rem 1.5rem;}
+    .tool-card {min-height: 130px;}
+    .metric-card, .feature-card {margin-bottom: 1rem;}
+    .flashcard-container {max-width: 100%; height: auto; padding-top: 56.25%; position: relative;}
+    .flashcard-inner, .flashcard-front, .flashcard-back {position: absolute; top:0; left:0; width:100%; height:100%;}
+    .tool-card, .flashcard-container {margin-bottom: 1rem;}
+    .grid-col1, .grid-col2, .grid-col3, .grid-col4, .grid-col5, .grid-col6 {width: 100% !important;}
+    .stColumns > div {flex: 1 1 100% !important;}
+}
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+    font-weight: 600 !important;
+    padding: 0.55rem 1.2rem !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25) !important;
+}
+
+button[kind="primary"]:hover {
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4) !important;
+    transform: translateY(-1px) !important;
+}
+
+button[kind="secondary"] {
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border) !important;
+    font-weight: 600 !important;
+}
